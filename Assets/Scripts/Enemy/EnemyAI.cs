@@ -5,32 +5,42 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     #region Variables
-    Rigidbody2D rb2d;
+    [Space]
     [SerializeField] Transform Target;
     [SerializeField] float Speed;
+    [SerializeField] float Distance_to_Player;
+    [Space]
 
-    [SerializeField] float Range;
+    [Header("Components")]
+    [Space]
+    [SerializeField] Rigidbody2D rb2d;
+    [SerializeField] Animator animator;
 
-    float Distance_to_Player;
+
+
 
     #endregion
 
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         Distance_to_Player = Vector2.Distance(transform.position, Target.position);
 
-        if(Distance_to_Player > Range)
+        // Move Animation
+        animator.SetFloat("Distance_From_Player", Distance_to_Player);
+
+        if(Distance_to_Player <= 10)
         {
-            StopChase();
+            Chase();
         }
         else
         {
-            Chase();
+            StopChase();
         }
     }
 
@@ -41,16 +51,14 @@ public class EnemyAI : MonoBehaviour
             // Move
             rb2d.velocity = new Vector2(Speed * Time.deltaTime, 0);
             // Facing
-            transform.localScale = new Vector2(1, 1);
-            // Move Animation
+            transform.localScale = new Vector2(0.7120208f, this.transform.localScale.y * 1);
         }
         else if (transform.position.x > Target.position.x)// Enemy is at the right side of the player, so it move left
         {
             // Move
             rb2d.velocity = new Vector2(-Speed * Time.deltaTime, 0);
             // Facing
-            transform.localScale = new Vector2(-1, 1);
-            // Move Animation
+            transform.localScale = new Vector2(-0.7120208f, this.transform.localScale.y * 1);
         }
     }
 
@@ -58,6 +66,5 @@ public class EnemyAI : MonoBehaviour
     {
         // Stop Move
         rb2d.velocity = new Vector2(0, 0);
-        // Play Idle Animation
     }
 }

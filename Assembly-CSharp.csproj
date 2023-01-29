@@ -36,19 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Player\Combat System\IdleComboState.cs" />
-     <Compile Include="Assets\Scripts\Player\Combat System\GroundEntryState.cs" />
-     <Compile Include="Assets\Scripts\Player\Movement.cs" />
-     <Compile Include="Assets\Scripts\Player\Combat System\MeleeEntryState.cs" />
-     <Compile Include="Assets\Scripts\Player\Combat System\GroundComboState.cs" />
-     <Compile Include="Assets\Scripts\Player\Combat System\MeleeBaseState.cs" />
-     <Compile Include="Assets\Scripts\Player\Combat System\State.cs" />
-     <Compile Include="Assets\Scripts\Player\Camera2D.cs" />
-     <Compile Include="Assets\Scripts\Player\Combat System\ComboCharacter.cs" />
-     <Compile Include="Assets\Scripts\TeamComponent.cs" />
-     <Compile Include="Assets\Scripts\Player\Combat System\GroundFinisherState.cs" />
-     <Compile Include="Assets\Scripts\Player\Combat System\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\Movement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyWeapon.cs" />
+     <Compile Include="Assets\Scripts\Camera2D.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerComboSystem.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerCombatSystem.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:\Unity Editor\2020.3.27f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
