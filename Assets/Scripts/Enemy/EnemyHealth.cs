@@ -8,11 +8,18 @@ public class EnemyHealth : MonoBehaviour
 
     public int Max_Health = 100;
     public int Current_Health = 0;
+
+    public EnemyHealthBar enemyHealthBar;
     #endregion
 
     void Start()
     {
         Current_Health = Max_Health;
+    }
+
+    void Update() 
+    {
+        enemyHealthBar.SetHealth(Current_Health, Max_Health);
     }
 
     public void Take_Damage(int Damage)

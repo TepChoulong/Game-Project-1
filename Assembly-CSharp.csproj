@@ -39,12 +39,15 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Player\Movement.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerCombatSystem.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyWeapon.cs" />
      <Compile Include="Assets\Scripts\Camera2D.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerComboSystem.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerCombatSystem.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyHealthBar.cs" />
+     <None Include="Assets\Sound Effect\Theme Song\Licensing.txt" />
+     <None Include="Assets\Sound Effect\Theme Song\Acknowledgements.txt" />
     <Reference Include="UnityEngine">
         <HintPath>E:\Unity Editor\2020.3.27f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
