@@ -37,6 +37,7 @@ public class Movement : MonoBehaviour
         JumpAnimationEvent();
         
         h_Move = Input.GetAxis("Horizontal");
+
         animator.SetFloat("Speed", Mathf.Abs(h_Move));
 
         v_Move = Input.GetAxis("Vertical");
@@ -71,11 +72,13 @@ public class Movement : MonoBehaviour
     void Move()
     {
         rb2d.velocity = new Vector2(h_Move * speed * Time.fixedDeltaTime, rb2d.velocity.y);
+         // Play move sound
     }
 
     void Jump()
     {
         rb2d.velocity = new Vector2(rb2d.velocity.x, jumpspeed * Time.fixedDeltaTime);
+         // Play jump sound
     }
 
     void FlipPlayer()

@@ -327,6 +327,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attack_rate: 1.8
+  Blood_Effect: {fileID: 6233104922925407955, guid: c14761ef1c5e47045b61206882b8b6a9, type: 3}
 --- !u!114 &1125719083
 MonoBehaviour:
   m_ObjectHideFlags: 0

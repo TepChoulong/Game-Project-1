@@ -23,6 +23,7 @@ public class EnemyAttack : StateMachineBehaviour
         {
             if (Vector2.Distance(player.position, rb.position) <= attackRange)
             {
+                GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyAI>().Speed = 0;
                 animator.SetTrigger("Attack");
             }
         }
@@ -35,6 +36,7 @@ public class EnemyAttack : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       animator.ResetTrigger("Attack");
+        animator.ResetTrigger("Attack");
+        GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyAI>().Speed = 80;
     }
 }

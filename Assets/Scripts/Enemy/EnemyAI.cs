@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
     #region Variables
     [Space]
     [SerializeField] Transform Target;
-    [SerializeField] float Speed;
+    public float Speed;
     [SerializeField] float Distance_to_Player;
     [Space]
 
